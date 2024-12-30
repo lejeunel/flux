@@ -23,10 +23,10 @@ spec:
       retries: 3
   values: |-
     authentik:
+      secret_key: "supersecret"
       log_level: trace
-      secret_key: "PleaseGenerateASecureKey"
       postgresql:
-        password: "ThisIsNotASecurePassword"
+        password: "supersecret"
 
     server:
       ingress:
@@ -51,7 +51,7 @@ spec:
       persistence:
         size: 1Gi
       auth:
-        password: "ThisIsNotASecurePassword"
+        password: "supersecret"
     redis:
       enabled: true
       master:
