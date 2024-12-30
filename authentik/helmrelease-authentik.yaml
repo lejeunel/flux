@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: authentik
@@ -7,14 +7,20 @@ spec:
   chart:
     spec:
       chart: authentik
-      version: 2023.10.x # auto-update to semver bugfixes only
+      version: 2024.10.x
       sourceRef:
         kind: HelmRepository
         name: authentik
         namespace: flux-system
-  interval: 15m
-  timeout: 15m
+  interval: 10m
+  timeout: 5m
   releaseName: authentik
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
   values: |-
     authentik:
         secret_key: "PleaseGenerateASecureKey"

@@ -1,28 +1,8 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
 metadata:
-  name: authentik
-  namespace: flux-system
+  name: podinfo
+  namespace: default
 spec:
   interval: 5m
-  chart:
-    spec:
-      chart: authentik
-      version: 2024.10.x
-      sourceRef:
-        kind: HelmRepository
-        name: authentik
-        namespace: flux-system
-      interval: 5m
-  install:
-    createNamespace: true
-    remediation:
-      retries: 3
-  upgrade:
-    remediation:
-      retries: 3
-  values:
-    image:
-      repository: ghcr.io/goauthentik/server
-      tag: 2024.10.x
-      pullPolicy: IfNotPresent
+  url: https://charts.goauthentik.io/
