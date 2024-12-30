@@ -25,7 +25,35 @@ our cluster.
 
 Once the flux bootstrap is completed without errors, list the pods in the cluster again, with ~kubectl get pods -A~.
 
+* Utilities and workflow
+When testing, no need to systematically push to git repo,
+we can rather use the standard ~kubectl apply -f <file-name>~ pattern
+to apply manifests.
+
+Next, one needs to delete the pod(s) to have it restarted afresh.
+
+** K9s
+
+TUI to manage kubernetes cluster.
+Ref: [[https://k9scli.io/]].
+
+
+
+* Components
+** Authentik
+Documentation: [[https://docs.goauthentik.io/docs/install-config/install/kubernetes]]
+*** Default credentials
+Upon first launch, head to https://<ingress-host-name>/if/flow/initial-setup/
+and login with username ~akadmin~.
+
+*** Gotchas
+
+1. If we get authentication issue, execute a shell in the
+postgre and/or authentik-server instances and check that environment
+variable match.
+
 * Resources
 
 - [[https://geek-cookbook.funkypenguin.co.nz/kubernetes/cluster/][Funky Penguin's Geek Cookbook]]
 - [[https://artur.rocks/i-set-up-authentik-outpost-for-k3s-with-traefik/]]
+- [[https://www.reddit.com/r/selfhosted/comments/wre8ua/authentiktraefikk8sfluxcd_because_documentation/]]
