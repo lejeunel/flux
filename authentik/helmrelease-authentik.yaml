@@ -33,16 +33,9 @@ spec:
       ingress:
         # Specify kubernetes ingress controller class name
         ingressClassName: traefik
-        annotations: {}
-        labels: {}
         enabled: true
-        hosts: []
-        resources:
-          requests:
-            cpu: 2000m
-            memory: 2Gi
-          limits:
-            memory: 3Gi
+        hosts:
+          - auth.local
 
     postgresql:
       enabled: true
