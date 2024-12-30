@@ -25,8 +25,8 @@ spec:
     authentik:
       secret_key: "supersecret"
       log_level: trace
-      postgresql:
-        password: "supersecret"
+    postgresql:
+      password: "supersecret"
 
     server:
       ingress:
