@@ -35,9 +35,9 @@ spec:
       ingress:
         # Specify kubernetes ingress controller class name
         ingressClassName: traefik
-          enabled: true
-          hosts:
-            - auth.local
+        enabled: true
+        hosts:
+          - auth.local
 
     postgresql:
       enabled: true
