@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: authentik-server
+  name: authentik
   namespace: authentik
 spec:
   forwardAuth:
