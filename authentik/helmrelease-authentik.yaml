@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  values: |-
+  values:
     authentik:
       secret_key: "supersecret"
       log_level: trace
