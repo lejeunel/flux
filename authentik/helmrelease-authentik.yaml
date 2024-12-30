@@ -23,7 +23,7 @@ spec:
       retries: 3
   values: |-
     authentik:
-      log_level: debug
+      log_level: trace
       secret_key: "PleaseGenerateASecureKey"
       postgresql:
         password: "ThisIsNotASecurePassword"
