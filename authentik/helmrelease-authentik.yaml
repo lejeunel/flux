@@ -34,10 +34,23 @@ spec:
         enabled: true
         hosts:
           - auth.local
-
+        resources:
+          requests:
+            cpu: 100m
+            memory: 2Gi
+          limits:
+            memory: 3Gi
     postgresql:
       enabled: true
       auth:
         password: "ThisIsNotASecurePassword"
     redis:
       enabled: true
+
+    worker:
+      resources:
+          requests:
+            cpu: 100m
+            memory: 2Gi
+          limits:
+            memory: 3Gi
