@@ -24,23 +24,23 @@ spec:
       retries: 3
   values:
     authentik:
-      secret_key: "supersecretkey"
+      secret_key: "supersecret"
       log_level: trace
       postgresql:
-        password: "ThisIsNotASecurePassword"
+        password: "supersecret"
 
     server:
       ingress:
         # Specify kubernetes ingress controller class name
         ingressClassName: traefik
         enabled: true
-        hosts:
-          - auth.local
+        # hosts:
+        #   - auth.local
 
     postgresql:
       enabled: true
       auth:
-        password: "ThisIsNotASecurePassword"
+        password: "supersecret"
 
     redis:
       enabled: true
