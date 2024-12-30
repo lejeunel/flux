@@ -35,11 +35,7 @@ spec:
         annotations: {}
         labels: {}
         enabled: true
-        hosts:
-          - auth.local
-          paths:
-            - path: "/"
-              pathType: Prefix
+        hosts: []
         resources:
           requests:
             cpu: 2000m
