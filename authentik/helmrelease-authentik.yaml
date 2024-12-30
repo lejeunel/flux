@@ -32,9 +32,14 @@ spec:
       ingress:
         # Specify kubernetes ingress controller class name
         ingressClassName: traefik
+        annotations: {}
+        labels: {}
         enabled: true
         hosts:
           - auth.local
+          paths:
+            - path: "/"
+              pathType: Prefix
         resources:
           requests:
             cpu: 1500m
