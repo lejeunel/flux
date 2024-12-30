@@ -36,7 +36,7 @@ spec:
           - auth.local
         resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 2Gi
           limits:
             memory: 3Gi
@@ -50,7 +50,7 @@ spec:
     worker:
       resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 2Gi
           limits:
             memory: 3Gi
