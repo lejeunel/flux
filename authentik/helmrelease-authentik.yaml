@@ -26,6 +26,8 @@ spec:
     authentik:
       secret_key: "supersecret"
       log_level: trace
+      postgresql:
+        password: "ThisIsNotASecurePassword"
 
     server:
       ingress:
@@ -43,11 +45,10 @@ spec:
             memory: 3Gi
     postgresql:
       enabled: true
-      password: "supersecret"
       persistence:
         size: 1Gi
       auth:
-        password: "supersecret"
+        password: "ThisIsNotASecurePassword"
     redis:
       enabled: true
       master:
