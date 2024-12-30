@@ -42,7 +42,7 @@ spec:
               pathType: Prefix
         resources:
           requests:
-            cpu: 1500m
+            cpu: 2000m
             memory: 2Gi
           limits:
             memory: 3Gi
@@ -61,7 +61,7 @@ spec:
     worker:
       resources:
           requests:
-            cpu: 1000m
+            cpu: 2000m
             memory: 2Gi
           limits:
             memory: 3Gi
