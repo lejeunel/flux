@@ -11,7 +11,7 @@ spec:
       version: 2024.10.x
       sourceRef:
         kind: HelmRepository
-        name: authentik-charts
+        name: authentik
         namespace: flux-system
       interval: 5m
   install:
