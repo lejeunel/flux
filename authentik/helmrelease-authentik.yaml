@@ -23,6 +23,7 @@ spec:
       retries: 3
   values: |-
     authentik:
+      log_level: debug
       secret_key: "PleaseGenerateASecureKey"
       postgresql:
         password: "ThisIsNotASecurePassword"
@@ -42,10 +43,15 @@ spec:
             memory: 3Gi
     postgresql:
       enabled: true
+      persistence:
+        size: 1Gi
       auth:
         password: "ThisIsNotASecurePassword"
     redis:
       enabled: true
+      master:
+        persistence:
+          size: 1Gi
 
     worker:
       resources:
