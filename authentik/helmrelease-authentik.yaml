@@ -33,11 +33,14 @@ spec:
     server:
       ingress:
         enabled: true
-        ingressClassName: "traefik"
+        ingressClassName: traefik
         annotations: {}
         labels: {}
         hosts:
           - host: auth.local
+            paths:
+              - path: "/"
+                pathType: Prefix
         tls: []
 
     postgresql:
