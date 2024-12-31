@@ -9,9 +9,6 @@ spec:
   routes:
     - match: Host(`podinfo.local`)
       kind: Rule
-      middlewares:
-      - name: authentik
-        namespace: authentik
       services:
         - name: podinfo
           port: 9898
