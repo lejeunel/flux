@@ -32,15 +32,13 @@ spec:
 
     server:
       ingress:
-        enabled: true
-        ingressClassName: traefik
+        # Specify kubernetes ingress controller class name
+        ingressClassName: "traefik"
         annotations: {}
         labels: {}
+        enabled: true
         hosts:
-          - host: auth.local
-            paths:
-              - path: "/"
-                pathType: Prefix
+          - auth.local
         tls: []
 
     postgresql:

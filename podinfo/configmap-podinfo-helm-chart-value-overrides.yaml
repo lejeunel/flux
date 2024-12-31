@@ -5,7 +5,7 @@ metadata:
   name: podinfo-helm-chart-value-overrides
   namespace: podinfo
 data:
-  values.yaml: |-
+  values.yaml:
     # Default values for podinfo.
 
     replicaCount: 1
@@ -109,13 +109,10 @@ data:
 
     ingress:
       enabled: true
-      className: ""
+      className: "traefik"
       annotations: {}
       hosts:
         - host: podinfo.local
-          paths:
-            - path: /
-              pathType: ImplementationSpecific
       tls: []
       #  - secretName: chart-example-tls
       #    hosts:
