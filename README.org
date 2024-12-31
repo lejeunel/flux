@@ -54,6 +54,12 @@ variable match.
 
 * Resources
 
+** Authorization / Authentication
+
 - [[https://geek-cookbook.funkypenguin.co.nz/kubernetes/cluster/][Funky Penguin's Geek Cookbook]]
 - [[https://artur.rocks/i-set-up-authentik-outpost-for-k3s-with-traefik/]]
 - [[https://www.reddit.com/r/selfhosted/comments/wre8ua/authentiktraefikk8sfluxcd_because_documentation/]]
+- [[https://www.reddit.com/r/selfhosted/comments/18ihp73/authentik_forward_auth_redirecting_to_authentik/]]
+- [[https://github.com/brokenscripts/authentik_traefik?tab=readme-ov-file#applications--providers]]
+
+- [[https://www.youtube.com/watch?v=1bTSOdYiIOQ&t=333s]]
