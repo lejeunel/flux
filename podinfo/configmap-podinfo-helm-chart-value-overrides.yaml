@@ -110,14 +110,14 @@ data:
 
     ingress:
       enabled: true
-      className: "traefik"
+      ingressClassName: traefik
       annotations: {}
+      labels: {}
       hosts:
         - host: podinfo.local
+          name: podinfo
+          namespace: podinfo
       tls: []
-      #  - secretName: chart-example-tls
-      #    hosts:
-      #      - chart-example.local
 
     linkerd:
       profile:

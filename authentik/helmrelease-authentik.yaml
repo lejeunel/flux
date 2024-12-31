@@ -33,7 +33,7 @@ spec:
     server:
       ingress:
         # Specify kubernetes ingress controller class name
-        ingressClassName: "traefik"
+        ingressClassName: traefik
         annotations: {}
         labels: {}
         enabled: true
