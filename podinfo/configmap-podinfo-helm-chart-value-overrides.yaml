@@ -5,7 +5,8 @@ metadata:
   name: podinfo-helm-chart-value-overrides
   namespace: podinfo
 data:
-  values.yaml:
+  values.yaml: |-
+
     # Default values for podinfo.
 
     replicaCount: 1
