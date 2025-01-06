@@ -108,17 +108,6 @@ data:
     # set container security context
     securityContext: {}
 
-    ingress:
-      enabled: true
-      ingressClassName: traefik
-      annotations: {}
-      labels: {}
-      hosts:
-        - host: podinfo.local
-          name: podinfo
-          namespace: podinfo
-      tls: []
-
     linkerd:
       profile:
         enabled: false
